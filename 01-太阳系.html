@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        /*.center{*/
+        /*position: absolute;*/
+        /*left:50%;*/
+        /*top:50%;*/
+        /*transform:translate(-50%,-50%);*/
+        /*}*/
+
+        /*.sun{*/
+        /*width: 100px;*/
+        /*height: 100px;*/
+        /*border-radius: 50%;*/
+        /*background-color: yellow;*/
+        /*box-shadow: 0px 0px 20px 1px red;*/
+        /*}*/
+
+        /*.earth{*/
+        /*width: 300px;*/
+        /*height: 300px;*/
+        /*border-radius: 50%;*/
+        /*border:1px solid #ccc;*/
+
+        /*animation:  rot  8s linear infinite;*/
+        /*}*/
+
+        /*.earth::before{*/
+        /*content:"";*/
+        /*position: absolute;*/
+        /*width: 40px;*/
+        /*height: 40px;*/
+        /*left:0;*/
+        /*top:0;*/
+        /*transform:translate(-50%,-50%);*/
+        /*background-color: dodgerblue;*/
+        /*border-radius: 50%;*/
+        /*top:50%;*/
+
+        /*}*/
+
+        /*.moon{*/
+        /*width: 60px;*/
+        /*height: 60px;*/
+        /*border-radius: 50%;*/
+        /*/!*border:1px solid #ccc;*!/*/
+
+        /*position: absolute;*/
+        /*left:0;*/
+        /*top:50%;*/
+        /*transform:translate(-50%,-50%);*/
+
+        /*animation:  rot  3s  infinite linear;*/
+        /*}*/
+
+        /*.moon::before{*/
+        /*content:"";*/
+        /*position: absolute;*/
+        /*width: 10px;*/
+        /*height: 10px;*/
+        /*left:0;*/
+        /*top:0;*/
+        /*transform:translate(-50%,-50%);*/
+        /*background-color: #fff;*/
+        /*border-radius: 50%;*/
+        /*top:50%;*/
+        /*}*/
+
+        /*.mars{*/
+        /*width: 450px;*/
+        /*height: 450px;*/
+        /*border-radius: 50%;*/
+        /*border:1px solid #ccc;*/
+
+        /*animation:  rot  6s linear infinite;*/
+        /*}*/
+
+        /*.mars::before{*/
+        /*content:"";*/
+        /*position: absolute;*/
+        /*width: 30px;*/
+        /*height: 30px;*/
+        /*left:0;*/
+        /*top:0;*/
+        /*background-color: darkgoldenrod;*/
+        /*border-radius: 50%;*/
+        /*top:50%;*/
+        /*transform:translate(-50%,-50%);*/
+        /*}*/
+
+        /*.venus{*/
+        /*width: 550px;*/
+        /*height: 550px;*/
+        /*border-radius: 50%;*/
+        /*border:1px solid #ccc;*/
+
+        /*animation:  rot  7s linear infinite;*/
+        /*}*/
+
+        /*.venus::before{*/
+        /*content:"";*/
+        /*position: absolute;*/
+        /*width: 60px;*/
+        /*height: 60px;*/
+        /*left:0;*/
+        /*top:0;*/
+        /*background-color: green;*/
+        /*border-radius: 50%;*/
+        /*top:50%;*/
+        /*transform:translate(-50%,-50%);*/
+        /*}*/
+
+        /*/!*定义动画*!/*/
+        /*@keyframes rot {*/
+        /*0%{*/
+        /*transform:translate(-50%,-50%) rotate(0deg);*/
+        /*}*/
+
+        /*100%{*/
+        /*transform:translate(-50%,-50%) rotate(360deg);*/
+
+        /*}*/
+        /*}*/
+
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .earth {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            animation:rot 8s infinite linear;
+        }
+
+        .earth::before {
+            width: 45px;
+            height: 45px;
+            background-color: blue;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .moon{
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform:translate(-50%,-50%);
+            position: absolute;
+            animation:rot 5s linear infinite;
+        }
+
+        .moon::before{
+            content:"";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color:orange;
+            border-radius:50%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform:translate(-50%,-50%);
+        }
+        .mars {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            animation:rot 6s infinite linear;
+        }
+        .mars::before{
+            content:"";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: yellow;
+            left: 0;
+            top: 0;
+            transform:translate(-50%,-50%);
+            left: 50%;
+        }
+        .venus{
+            width: 600px;
+            height: 600px;
+            border: 1px solid #fff;
+            border-radius:50%;
+            animation:rot 4s linear infinite;
+        }
+        .venus::before{
+            content:"";
+            display:block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius:50%;
+            top: 0;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            background-color: green;
+        }
+
+        @keyframes rot{
+            0%{
+                transform: translate(-50%, -50%)  rotate(0deg)
+            }
+            100%{
+                transform:translate(-50%, -50%)  rotate(360deg)
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="sun center"></div>
+<div class="earth center">
+    <div class="moon"></div>
+</div>
+<div class="mars center"></div>
+<div class="venus center"></div>
+
+</body>
+</html>
